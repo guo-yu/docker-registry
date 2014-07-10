@@ -1,4 +1,5 @@
 var sdk = require('sdk');
+var apis = require('./apis');
 
 module.exports = registry;
 
