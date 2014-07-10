@@ -1,10 +1,10 @@
 {
   "name": "docker-registry",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a sdk for docker-registry api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "DEBUG=sdk* node examples/index"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/turingou/docker-registry/issues"
   },
-  "homepage": "https://github.com/turingou/docker-registry"
+  "homepage": "https://github.com/turingou/docker-registry",
+  "dependencies": {
+    "sdk": "0.2.x"
+  }
 }
