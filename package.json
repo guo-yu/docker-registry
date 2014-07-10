@@ -1,0 +1,27 @@
+{
+  "name": "docker-registry",
+  "version": "0.0.0",
+  "description": "a sdk for docker-registry api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turingou/docker-registry.git"
+  },
+  "keywords": [
+    "docker",
+    "docker-registry",
+    "registry",
+    "paas",
+    "dockerhub",
+    "hub"
+  ],
+  "author": "turing <o.u.turing@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turingou/docker-registry/issues"
+  },
+  "homepage": "https://github.com/turingou/docker-registry"
+}
