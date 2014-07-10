@@ -4,17 +4,81 @@ a sdk for docker-registry api
 
 ### Installation
 ````
-$ [sudo] npm install docker-registry
+$ npm install docker-registry
 ````
 
-
 ### Example
+
+checkout all examples here: `./examples`
+
 ````javascript
-var docker-registry = require('docker-registry');
+// init local registry, without auth
+var registry = require('docker-registry')('http://127.0.0.1:5000');
+
+// hight level, using alias
+registry.status(function(err, res, body){
+  if (err) throw err;
+  console.log(body);
+});
+
+// lowlevel
+registry.get('v1/images/xxxxxx/json',{}, function (err, res, body) {
+  if (err) throw err;
+  console.log(body);
+});
 ````
 
 ### API
-check this file: `index.js`
+
+- `new registry(host[String])` or just `registry(host[String])`
+
+- `registry.status([params[Object],] [callback[String]])` both params and callback are optional
+
+- `registry.ping([params[Object],] [callback[String]])` both params and callback are optional
+
+- `registry.getImageLayer([params[Object],] [callback[String]])` callback are optional
+  - `params.id`: the image's ID (hash)
+
+- `registry.putImageLayer([params[Object],] [callback[String]])` callback are optional
+  - `params.id`: the image's ID (hash)
+
+- `registry.putImage([params[Object],] [callback[String]])` callback are optional
+  - `params.id`: the image's ID (hash)
+
+- `registry.getImage([params[Object],] [callback[String]])` callback are optional
+  - `params.id`: the image's ID (hash)
+
+- `registry.getAncestry([params[Object],] [callback[String]])` callback are optional
+  - `params.id`: the image's ID (hash)
+
+- `registry.getTags([params[Object],] [callback[String]])` callback are optional
+  - `params.namespace`: the namespace's ID (hash)
+  - `params.repository`: the repository's ID (hash)
+
+- `registry.getTag([params[Object],] [callback[String]])` callback are optional
+  - `params.namespace`: the namespace's ID (hash)
+  - `params.repository`: the repository's ID (hash)
+  - `params.tag`: the tag's name(hash)
+
+- `registry.putTag([params[Object],] [callback[String]])` callback are optional
+  - `params.namespace`: the namespace's ID (hash)
+  - `params.repository`: the repository's ID (hash)
+  - `params.tag`: the tag's name(hash)
+
+- `registry.deleteTag([params[Object],] [callback[String]])` callback are optional
+  - `params.namespace`: the namespace's ID (hash)
+  - `params.repository`: the repository's ID (hash)
+  - `params.tag`: the tag's name(hash)
+
+- `registry.deleteRepo([params[Object],] [callback[String]])` callback are optional
+  - `params.namespace`: the namespace's ID (hash)
+  - `params.repository`: the repository's ID (hash)
+
+- `registry.ACTION`: the lowlevel function set
+  - `registry.get(url[String], params[Object], callback[Function])`
+  - `registry.post(url[String], params[Object], callback[Function])`
+  - `registry.put(url[String], params[Object], callback[Function])`
+  - `registry.delete(url[String], params[Object], callback[Function])`
 
 ### Contributing
 - Fork this repo

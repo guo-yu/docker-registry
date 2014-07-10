@@ -1,4 +1,8 @@
 module.exports = {
+  // fetching status of the registry server
+  status: '/v1/_ping', 
+  // alias for fetcing status
+  ping: '/v1/_ping',
   getImageLayer: {
     method: 'get',
     url: '/v1/images/{{id}}/layer'
