@@ -9,7 +9,11 @@ $ npm install docker-registry
 
 ### Example
 
-checkout all examples here: `./examples`
+run basic example by:
+```
+$ npm run example
+```
+or checkout all examples here: `./examples`
 
 ````javascript
 // init local registry, without auth

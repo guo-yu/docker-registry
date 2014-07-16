@@ -4,7 +4,8 @@
   "description": "a sdk for docker-registry api",
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=sdk* node examples/index"
+    "test": "./node_modules/mocha/bin/mocha ./tests/index.js",
+    "example": "DEBUG=sdk* node examples/index"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,9 @@
   "homepage": "https://github.com/turingou/docker-registry",
   "dependencies": {
     "sdk": "0.2.x"
+  },
+  "devDependencies": {
+    "should": "~4.0.4",
+    "mocha": "~1.20.1"
   }
 }
