@@ -1,4 +1,4 @@
-var registry = require('..')('http://localhost:5000');
+var registry = require('..')('http://192.168.0.240:5000');
 
 // hight level, using alias
 registry.status(function(err, res, body){
