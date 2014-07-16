@@ -1,4 +1,4 @@
-## docker-registry ![npm](https://badge.fury.io/js/docker-registry.png) &nbsp; ![ci](https://api.travis-ci.org/turingou/docker-registry.png?branch=master)
+## docker-registry ![npm](https://badge.fury.io/js/docker-registry.png)&nbsp;![ci](https://api.travis-ci.org/turingou/docker-registry.png?branch=master)
 
 a sdk for docker-registry api
 
