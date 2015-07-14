@@ -3,6 +3,10 @@ module.exports = {
   status: '/v1/_ping', 
   // alias for fetcing status
   ping: '/v1/_ping',
+  search: {
+    method: 'get',
+    url: '/v1/search?q={{token}}'
+  },
   getImageLayer: {
     method: 'get',
     url: '/v1/images/{{id}}/layer'
