@@ -3,9 +3,13 @@ module.exports = {
   status: '/v1/_ping', 
   // alias for fetcing status
   ping: '/v1/_ping',
-  search: {
+  searchImage: {
     method: 'get',
     url: '/v1/search?q={{token}}'
+  },
+  listImages: {
+    method: 'get',
+    url: '/v1/search'
   },
   getImageLayer: {
     method: 'get',
