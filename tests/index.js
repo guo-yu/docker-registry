@@ -1,4 +1,4 @@
-var registry = require('..')('http://127.0.0.1:5000');
+var registry = require('..')('http://localhost:5000');
 
 describe('Ping', function() {
   it(':local docker registry should be alive', function(done) {
